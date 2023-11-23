@@ -1,0 +1,19 @@
+// Random number selection core 
+
+import random
+
+list1=[]
+while(True):
+    number_list = list(range(1, 101))
+    list1.clear()
+    while(len(list1)<100):
+        if len(number_list)>1:
+            i = number_list[random.randrange(1, len(number_list), 1)]
+        elif len(number_list)==1:
+            i = number_list[0]
+        number_list.remove(i)
+        list1.append(i)
+    for i in list1:
+        print(i)
+        input()
+    
